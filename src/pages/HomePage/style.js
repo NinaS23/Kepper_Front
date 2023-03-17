@@ -50,6 +50,10 @@ font-style: normal;
 font-weight: 700;
 font-size: 15px;
 line-height: 18px;
+:hover{
+    cursor: pointer;
+    color: #f9ac90;
+}
 `
 const SingUpButton = styled.button`
 background-color: #FF936A;
@@ -66,7 +70,12 @@ h2{
     font-size: 15px;
     line-height: 18px;
 }
+:hover{
+    cursor: pointer;
+    background-color: #f9ac90;
+}
 `
+
 const WelcomeText = styled.div`
 display: flex;
 flex-direction: column;
