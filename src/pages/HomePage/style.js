@@ -80,7 +80,7 @@ h2{
     background-color: #f9ac90;
 }
 @media (max-width: 760px) {
-    margin-right: 28px;
+    margin-right: 26px;
 }
 `
 const WelcomeSide = styled.div`
