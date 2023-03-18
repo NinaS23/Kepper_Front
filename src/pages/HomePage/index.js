@@ -1,4 +1,4 @@
-import { TopMenu, ImageHeight, HomeContent, WelcomeSide, TopText, SingUpButton,WelcomeText } from "./style";
+import { TopMenu, ImageHeight, HomeContent, WelcomeSide, TopText, SingUpButton, WelcomeText } from "./style";
 import passwordGuy from "../../assets/imgs/passwordGuy.svg";
 
 function HomePage() {
@@ -17,15 +17,15 @@ function HomePage() {
                 </div>
             </TopMenu>
             <HomeContent>
-                <div>
-                    <ImageHeight src={passwordGuy} alt="pessoas com gráfico" />
-                </div>
                 <WelcomeSide>
                     <WelcomeText>
                         <h1>Bem-Vindo ao Kepper</h1>
                         <h2>O lugar mais rápido de encontrar suas senhas</h2>
                     </WelcomeText>
                 </WelcomeSide>
+                <div>
+                    <ImageHeight src={passwordGuy} alt="pessoas com gráfico" />
+                </div>
             </HomeContent>
         </>
     );
