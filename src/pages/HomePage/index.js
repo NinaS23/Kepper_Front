@@ -1,12 +1,13 @@
-import { TopMenu, ImageHeight, HomeContent, WelcomeSide, TopText, SingUpButton, WelcomeText } from "./style";
+import { TopMenu,Logo, ImageHeight, HomeContent, WelcomeSide, TopText, SingUpButton, WelcomeText } from "./style";
 import passwordGuy from "../../assets/imgs/passwordGuy.svg";
+import logo from "../../assets/imgs/logo.png";
 
 function HomePage() {
     return (
         <>
             <TopMenu>
                 <div>
-                    <TopText>Logo</TopText>
+                   <Logo src={logo} alt="logo" />
                     <TopText>sobre</TopText>
                 </div>
                 <div>

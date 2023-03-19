@@ -19,7 +19,11 @@ div{
 
   
 `
+const Logo = styled.img`
+width: 50px;
+height: 56px;
 
+`
 const ImageHeight = styled.img`
 margin-left: 15px;
 width: 560px;
@@ -134,6 +138,7 @@ h2{
 export {
     TopMenu,
     ImageHeight,
+    Logo,
     HomeContent,
     WelcomeSide,
     TopText,
