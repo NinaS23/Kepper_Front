@@ -29,7 +29,7 @@ margin-left: 15px;
 width: 560px;
 height: fit-content;
 @media (max-width: 760px) {
-    width: 360px;
+    width: 310px;
   }
 `
 

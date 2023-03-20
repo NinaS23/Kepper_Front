@@ -7,7 +7,7 @@ function HomePage() {
         <>
             <TopMenu>
                 <div>
-                   <Logo src={logo} alt="logo" />
+                    <TopText>logo</TopText>
                     <TopText>sobre</TopText>
                 </div>
                 <div>
