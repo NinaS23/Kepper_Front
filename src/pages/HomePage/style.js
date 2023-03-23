@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 const TopMenu = styled.div`
 display: flex;
@@ -135,6 +136,20 @@ h2{
     }
    }
 `
+const StyledLink = styled(Link)`
+text-decoration: none;
+text-align: center;
+font-family: 'Lexend', sans-serif;
+color: #FF936A;
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+:hover{
+    cursor: pointer;
+    color: #f9ac90;
+}
+`
 export {
     TopMenu,
     ImageHeight,
@@ -143,5 +158,6 @@ export {
     WelcomeSide,
     TopText,
     SingUpButton,
-    WelcomeText
+    WelcomeText,
+    StyledLink
 }

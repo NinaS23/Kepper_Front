@@ -1,8 +1,21 @@
-import { TopMenu,Logo, ImageHeight, HomeContent, WelcomeSide, TopText, SingUpButton, WelcomeText } from "./style";
 import passwordGuy from "../../assets/imgs/passwordGuy.svg";
 import logo from "../../assets/imgs/logo.png";
+import {
+    TopMenu,
+    Logo,
+    ImageHeight,
+    HomeContent,
+    WelcomeSide,
+    TopText,
+    SingUpButton,
+    WelcomeText,
+    StyledLink
+} from "./style";
+
+
 
 function HomePage() {
+
     return (
         <>
             <TopMenu>
@@ -11,7 +24,11 @@ function HomePage() {
                     <TopText>sobre</TopText>
                 </div>
                 <div>
-                    <TopText>login</TopText>
+                    <TopText>
+                        <StyledLink to={"/sing-in"}>
+                            login
+                        </StyledLink>
+                    </TopText>
                     <SingUpButton>
                         <h2>cadastro</h2>
                     </SingUpButton>
