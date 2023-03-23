@@ -23,6 +23,7 @@ const _Input = styled.input`
   background-position: center bottom, center calc(100% - 1px);
   background-repeat: no-repeat;
   border-radius: 12px;
+  background-color: transparent;
   background-size: 0 2px, 100% 1px;
   margin-left: 47px;
   margin-top: 45px;
