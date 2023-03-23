@@ -3,7 +3,8 @@ import loginGuy from "../../assets/imgs/login.png";
 import Icon from "../../components/Icon";
 import {
     ImageContainer,
-    LoginContainer
+    LoginContainer,
+    ImageLogin
 } from "./style";
 import {
     BoxSingInAndSingUp,
@@ -36,7 +37,7 @@ function Login() {
                     </BoxSingInAndSingUp>
                 </BoxContainer>
                 <ImageContainer>
-                    <img src={loginGuy} alt="pessoas com gráfico" />
+                    <ImageLogin src={loginGuy} alt="pessoas com gráfico" />
                 </ImageContainer>
             </LoginContainer>
         </>

@@ -12,14 +12,20 @@ align-items: center;
 `
 
 const ImageContainer = styled.div`
-margin-left: 20%;
+margin-left: 260px;
 height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 `
+
+const ImageLogin = styled.img`
+width: 90%;
+
+`
 export {
     LoginContainer,
-    ImageContainer
+    ImageContainer,
+    ImageLogin
 }
