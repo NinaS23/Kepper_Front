@@ -10,7 +10,8 @@ import {
     _Input,
     InputDiv,
     BoxContainer,
-    VisibilityContainer
+    VisibilityContainer,
+    SendUserInfo
 } from "../../assets/styles/globalStyles";
 
 function Login() {
@@ -29,7 +30,9 @@ function Login() {
                                 </div>
                             </VisibilityContainer>
                         </InputDiv>
-
+                        <SendUserInfo>
+                            <h2>Entrar</h2>
+                        </SendUserInfo>
                     </BoxSingInAndSingUp>
                 </BoxContainer>
                 <ImageContainer>

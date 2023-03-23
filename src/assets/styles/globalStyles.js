@@ -46,27 +46,54 @@ const VisibilityContainer = styled.div`
 position: absolute;
 width: 32px;
 height: 28px;
-background: #c2d7fc;
+background: #FF936A;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 border-radius: 5px;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 margin-left: 303px;
 margin-top: 7px;
 ion-icon{
-  color:  #6b6b6b;
+  color:  #FFFFFF;
   cursor:pointer;
-  width: 50px;
-  height: 20px;
+  width: 40px;
+  height: 24px;
 }
-
+&:hover{
+    cursor: pointer;
+    background-color: #fc9e7b;
+}
+`
+const SendUserInfo = styled.button`
+position: absolute;
+width: 50%;
+height: 30px;
+margin-top: 120px;
+margin-left: 94px;
+border-style: none;
+background: #FF936A;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+h2{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+&:hover{
+    cursor: pointer;
+    background-color: #fc9e7b;
+}
 `
 export {
     BoxSingInAndSingUp,
     _Input,
     InputDiv,
     BoxContainer,
-    VisibilityContainer
+    VisibilityContainer,
+    SendUserInfo
 }
