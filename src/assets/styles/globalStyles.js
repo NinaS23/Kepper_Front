@@ -22,10 +22,11 @@ const _Input = styled.input`
   border: 0 none;
   background-position: center bottom, center calc(100% - 1px);
   background-repeat: no-repeat;
+  border-radius: 12px;
   background-size: 0 2px, 100% 1px;
   margin-left: 47px;
   margin-top: 45px;
-  color: #bfbfbf;
+  color: #898686;
   min-height: 35px;
   width: 70%;
   font-size: 15px;
@@ -40,12 +41,32 @@ const _Input = styled.input`
     }
 `;
 const InputDiv = styled.div`
-
+`
+const VisibilityContainer = styled.div`
+position: absolute;
+width: 32px;
+height: 28px;
+background: #c2d7fc;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 5px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin-left: 303px;
+margin-top: 7px;
+ion-icon{
+  color:  #6b6b6b;
+  cursor:pointer;
+  width: 50px;
+  height: 20px;
+}
 
 `
 export {
     BoxSingInAndSingUp,
     _Input,
     InputDiv,
-    BoxContainer
+    BoxContainer,
+    VisibilityContainer
 }
