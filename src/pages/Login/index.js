@@ -20,8 +20,8 @@ function Login() {
     return (
         <>
             <LoginContainer>
-                <BoxContainer>
-                    <BoxSingInAndSingUp>
+                <BoxContainer marginLeft={"10%"}>
+                    <BoxSingInAndSingUp backgroundColor={"#FFFFFF"}>
                         <InputDiv>
                             <_Input type='text' placeholder="Email .." />
                             <_Input type={typeInput} placeholder="Senha .." />
@@ -31,7 +31,7 @@ function Login() {
                                 </div>
                             </VisibilityContainer>
                         </InputDiv>
-                        <SendUserInfo>
+                        <SendUserInfo marginTop={"120px"}>
                             <h2>Entrar</h2>
                         </SendUserInfo>
                     </BoxSingInAndSingUp>

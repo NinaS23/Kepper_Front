@@ -4,7 +4,7 @@ const BoxSingInAndSingUp = styled.div`
 position: absolute;
 width: 417px;
 height: 484px;
-background: #FFFFFF;
+background:  ${(props) => props.backgroundColor};;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
 `
@@ -13,7 +13,7 @@ const BoxContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-right: 10%;
+    margin-right:  ${(props) => props.marginLeft};
 `
 
 
@@ -71,7 +71,7 @@ const SendUserInfo = styled.button`
 position: absolute;
 width: 50%;
 height: 30px;
-margin-top: 120px;
+margin-top: ${(props) => props.marginTop};
 margin-left: 94px;
 border-style: none;
 background: #FF936A;

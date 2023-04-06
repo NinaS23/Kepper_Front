@@ -1,8 +1,6 @@
 import passwordGuy from "../../assets/imgs/passwordGuy.svg";
-import logo from "../../assets/imgs/logo.png";
 import {
     TopMenu,
-    Logo,
     ImageHeight,
     HomeContent,
     WelcomeSide,
