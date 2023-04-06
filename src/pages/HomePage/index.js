@@ -25,12 +25,22 @@ function HomePage() {
                 </div>
                 <div>
                     <TopText>
-                        <StyledLink to={"/sing-in"}>
+                        <StyledLink
+                            letterColor={"#FF936A"}
+                            buttonHoverColor={"#f9ac90"}
+                            to={"/sign-in"}
+                        >
                             login
                         </StyledLink>
                     </TopText>
                     <SingUpButton>
-                        <h2>cadastro</h2>
+                        <StyledLink
+                            letterColor={"#ffffff"}
+                            buttonHoverColor={"#ffffff"}
+                            to={"/sign-up"}
+                        >
+                            cadastro
+                        </StyledLink>
                     </SingUpButton>
                 </div>
             </TopMenu>

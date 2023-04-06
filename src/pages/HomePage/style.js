@@ -140,14 +140,14 @@ const StyledLink = styled(Link)`
 text-decoration: none;
 text-align: center;
 font-family: 'Lexend', sans-serif;
-color: #FF936A;
+color:  ${(props) => props.letterColor};
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
 line-height: 18px;
 :hover{
     cursor: pointer;
-    color: #f9ac90;
+    color:  ${(props) => props.buttonHoverColor};;
 }
 `
 export {
