@@ -1,5 +1,7 @@
 function Register(){
-<div>oi</div>
+ return (
+    <h1>oi</h1>
+ )
 }
 
 export default Register;
