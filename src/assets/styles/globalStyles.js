@@ -7,13 +7,22 @@ height: 484px;
 background:  ${(props) => props.backgroundColor};;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
+    @media (max-width: 614px) {
+        width: 95%;
+        height: 25rem;
+        position: sticky;
+}
 `
 
 const BoxContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-right:  ${(props) => props.marginLeft};
+    margin-right:  ${(props) => props.marginRight};
+    @media (max-width: 614px) {
+        margin-right: 0%;
+        margin-left: 5%;
+}
 `
 
 
@@ -66,6 +75,9 @@ ion-icon{
     cursor: pointer;
     background-color: #fc9e7b;
 }
+@media (max-width: 614px) {
+    margin-left:74%;
+}
 `
 const SendUserInfo = styled.button`
 position: absolute;
@@ -88,6 +100,9 @@ h2{
 &:hover{
     cursor: pointer;
     background-color: #fc9e7b;
+}
+@media (max-width: 614px) {
+    margin-top: 35%;
 }
 `
 export {

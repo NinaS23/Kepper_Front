@@ -20,7 +20,7 @@ function Register() {
     const [typeInput, setTypeInput] = useState("password");
     return (
         <RegisterContainer>
-            <BoxContainer marginLeft={"58%"}>
+            <BoxContainer marginRight={"58%"}>
                 <BoxSingInAndSingUp backgroundColor={"#FFFFFF"}>
                     <InputDiv>
                         <_Input type='text' placeholder="Email .." />

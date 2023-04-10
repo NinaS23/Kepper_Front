@@ -29,7 +29,7 @@ const ImageHeight = styled.img`
 margin-left: 15px;
 width: 560px;
 height: fit-content;
-@media (max-width: 760px) {
+@media (max-width: 614px) {
     width: 310px;
   }
 `
@@ -38,7 +38,7 @@ const HomeContent = styled.div`
 align-items: center;
 height: 38rem;
 display: flex;
-@media (max-width: 760px) {
+@media (max-width: 614px) {
     height: 530px;
     width: 100%;
     display: flex;
@@ -61,7 +61,7 @@ line-height: 18px;
     cursor: pointer;
     color: #f9ac90;
 }
-@media (max-width: 760px) {
+@media (max-width: 614px) {
   margin-left: 3px;
 }
 `
@@ -84,7 +84,7 @@ h2{
     cursor: pointer;
     background-color: #f9ac90;
 }
-@media (max-width: 760px) {
+@media (max-width: 614px) {
     margin-right: 26px;
 }
 `
@@ -95,7 +95,7 @@ flex-direction: column;
 align-items: center;
 width: 50%;
 height: 80%;
-@media (max-width: 760px) {
+@media (max-width: 614px) {
    width: 100%;
    height: 100%;
 }
@@ -125,7 +125,7 @@ h2{
     text-align: center;
     color: #000000;
 }
-@media (max-width: 760px) {
+@media (max-width: 614px) {
    width: 95%;
    height: 100%;
    h1{

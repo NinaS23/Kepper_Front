@@ -20,7 +20,7 @@ function Login() {
     return (
         <>
             <LoginContainer>
-                <BoxContainer marginLeft={"10%"}>
+                <BoxContainer marginRight={"10%"}>
                     <BoxSingInAndSingUp backgroundColor={"#FFFFFF"}>
                         <InputDiv>
                             <_Input type='text' placeholder="Email .." />
