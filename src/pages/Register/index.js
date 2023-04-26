@@ -29,8 +29,8 @@ function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setconfirmPassword] = useState("");
-    const [showToast, setShowToast] = useState(false);
-
+    const [errorMessage, setErrorMessage] = useState("");
+ 
     const [isLoading, setIsLoading] = useState(false);
     const [enable, setEnable] = useState(false);
     const navigate = useNavigate();
@@ -58,13 +58,15 @@ function Register() {
                     navigate("/sign-in");
                 }).catch((err) => {
                     console.log(err)
-                    if (err.response.status === 422) {
+                    if (err.response.status === 422 && err.response.data.details[0].message === 
+                        "\"confirmPassword\" must be [ref:password]" ) {
+                        toast.error("As senhas que você digitou não coincidem. Por favor, tente novamente")
 
-                        toast.error(err.response.data.details[0].message)
+                    } else if( err.response.status === 422 && err.response.data.details[0].message === '"password" length must be at least 9 characters long'){
+                        toast.error("A senha precisa ter no mínimo 9 caracters");
 
                     } else {
                         toast.error(err.response.data);
-
                     }
                     setIsLoading(false);
                     setEnable(false);
@@ -74,7 +76,6 @@ function Register() {
 
     return (
         <FormSignUp onSubmit={sendUserSignUpData}>
-            {ToastContainer ?
                 <ToastContainer
                     position="top-right"
                     autoClose={5000}
@@ -86,8 +87,6 @@ function Register() {
                     draggable
                     pauseOnHover
                     theme="colored" />
-                :
-                <></>}
             <RegisterContainer>
                 <BoxContainer marginRight={"58%"}>
                     <BoxSingInAndSingUp backgroundColor={"#FFFFFF"}>
