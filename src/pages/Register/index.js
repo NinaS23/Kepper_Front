@@ -31,24 +31,28 @@ function Register() {
     const [enable, setEnable] = useState(false);
     const navigate = useNavigate();
 
-    async function sendUserSignUpData(e) {
-        try {
-            e.preventDefault();
-            setIsLoading(true);
-            setEnable(true);
+    function sendUserSignUpData(event) {
+        event.preventDefault();
+
+        setIsLoading(true);
+
+        if(!email || !password || !confirmPassword ) {
+            alert("all fields need to be filled");
+            setIsLoading(false);
+        } else {
             const body = {
                 email,
                 password,
                 confirmPassword
             }
-            const request = await axios.post("http://localhost:6003/sign-up", body);
-            console.log(request);
-            navigate("/sign-in");
-        } catch (error) {
-           alert("credentials are incorrect,please verify");
-        } finally {
-            setEnable(false)
-            setIsLoading(false);
+            const promise = axios.post("http://localhost:6003/sign-up", body);
+            promise
+                .then(res => {
+                    navigate("/sign-in");
+                }).catch((err) => {
+                    alert(err.response.data);
+                    setIsLoading(false);
+                })
         }
     }
 
