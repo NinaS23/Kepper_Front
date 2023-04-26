@@ -37,7 +37,7 @@ function Register() {
         setIsLoading(true);
 
         if(!email || !password || !confirmPassword ) {
-            alert("all fields need to be filled");
+            alert("todos os campos são obrigatórios");
             setIsLoading(false);
         } else {
             const body = {
@@ -45,13 +45,16 @@ function Register() {
                 password,
                 confirmPassword
             }
+            setEnable(true);
             const promise = axios.post("http://localhost:6003/sign-up", body);
+           
             promise
                 .then(res => {
                     navigate("/sign-in");
                 }).catch((err) => {
                     alert(err.response.data);
                     setIsLoading(false);
+                    setEnable(false);
                 })
         }
     }
