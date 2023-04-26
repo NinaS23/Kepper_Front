@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ThreeDots } from 'react-loader-spinner';
+import axios from "axios";
 import Icon from "../../components/Icon";
 import welcomePic from "../../assets/imgs/signUp.png";
-import { api } from "../../services/apiService";
-
 import {
     RegisterContainer,
     RegisterImageContainer,
     ImageRegister,
-    FormSignUp
+    FormSignUp,
+    BoxButton,
 } from "./style";
 import {
     BoxSingInAndSingUp,
@@ -18,7 +19,7 @@ import {
     VisibilityContainer,
     SendUserInfo
 } from "../../assets/styles/globalStyles";
-import axios from "axios";
+
 
 
 function Register() {
@@ -97,12 +98,32 @@ function Register() {
                                 </div>
                             </VisibilityContainer>
                         </InputDiv>
-                        <SendUserInfo
-                            marginTop={"70px"}
-                            type="subimit"
-                        >
-                            <h2>Cadastrar</h2>
-                        </SendUserInfo>
+                        {isLoading ? (
+                            <BoxButton>
+                                <SendUserInfo disabled >
+                                    <ThreeDots
+                                        height={10}
+                                        width={60}
+                                        radius="9"
+                                        color="#ffffff"
+                                        ariaLabel="three-dots-loading"
+                                        wrapperStyle={{}}
+                                        wrapperClassName=""
+                                        visible={true}
+                                    />
+
+                                </SendUserInfo>
+                            </BoxButton>
+                        ) :
+                            <BoxButton>
+                                <SendUserInfo
+                                    marginTop={"0px"}
+                                    type="subimit"
+                                >
+                                    <h2>Cadastrar</h2>
+                                </SendUserInfo>
+                            </BoxButton>
+                        }
                     </BoxSingInAndSingUp>
                 </BoxContainer>
                 <RegisterImageContainer>

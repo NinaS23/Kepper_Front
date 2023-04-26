@@ -80,8 +80,8 @@ ion-icon{
 }
 `
 const SendUserInfo = styled.button`
-position: absolute;
-width: 50%;
+position: relative;
+width: 200px;
 height: 30px;
 margin-top: ${(props) => props.marginTop};
 margin-left: 94px;
@@ -96,6 +96,12 @@ h2{
     font-size: 15px;
     line-height: 29px;
     color: #FFFFFF;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 &:hover{
     cursor: pointer;
