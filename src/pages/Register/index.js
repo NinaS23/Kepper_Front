@@ -30,7 +30,7 @@ function Register() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setconfirmPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
- 
+
     const [isLoading, setIsLoading] = useState(false);
     const [enable, setEnable] = useState(false);
     const navigate = useNavigate();
@@ -58,11 +58,12 @@ function Register() {
                     navigate("/sign-in");
                 }).catch((err) => {
                     console.log(err)
-                    if (err.response.status === 422 && err.response.data.details[0].message === 
-                        "\"confirmPassword\" must be [ref:password]" ) {
+                    if (err.response.status === 422 && err.response.data.details[0].message ===
+                        "\"confirmPassword\" must be [ref:password]") {
                         toast.error("As senhas que você digitou não coincidem. Por favor, tente novamente")
 
-                    } else if( err.response.status === 422 && err.response.data.details[0].message === '"password" length must be at least 9 characters long'){
+                    } else if (err.response.status === 422 && err.response.data.details[0].message ===
+                        '"password" length must be at least 9 characters long') {
                         toast.error("A senha precisa ter no mínimo 9 caracters");
 
                     } else {
@@ -76,17 +77,17 @@ function Register() {
 
     return (
         <FormSignUp onSubmit={sendUserSignUpData}>
-                <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="colored" />
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored" />
             <RegisterContainer>
                 <BoxContainer marginRight={"58%"}>
                     <BoxSingInAndSingUp backgroundColor={"#FFFFFF"}>
