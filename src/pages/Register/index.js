@@ -36,7 +36,7 @@ function Register() {
 
         setIsLoading(true);
 
-        if(!email || !password || !confirmPassword ) {
+        if (!email || !password || !confirmPassword) {
             alert("todos os campos são obrigatórios");
             setIsLoading(false);
         } else {
@@ -47,12 +47,17 @@ function Register() {
             }
             setEnable(true);
             const promise = axios.post("http://localhost:6003/sign-up", body);
-           
+
             promise
                 .then(res => {
                     navigate("/sign-in");
                 }).catch((err) => {
-                    alert(err.response.data);
+                    console.log(err)
+                    if (err.response.status === 422) {
+                        alert(err.response.data.details[0].message)
+                    } else {
+                        alert(err.response.data);
+                    }
                     setIsLoading(false);
                     setEnable(false);
                 })
