@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ThreeDots } from 'react-loader-spinner';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import Icon from "../../components/Icon";
 import welcomePic from "../../assets/imgs/signUp.png";
@@ -27,10 +29,12 @@ function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setconfirmPassword] = useState("");
+    const [showToast, setShowToast] = useState(false);
 
     const [isLoading, setIsLoading] = useState(false);
     const [enable, setEnable] = useState(false);
     const navigate = useNavigate();
+
 
     function sendUserSignUpData(event) {
         event.preventDefault();
@@ -38,7 +42,7 @@ function Register() {
         setIsLoading(true);
 
         if (!email || !password || !confirmPassword) {
-            alert("todos os campos são obrigatórios");
+            toast.error("todos os campos são obrigatórios");
             setIsLoading(false);
         } else {
             const body = {
@@ -55,9 +59,12 @@ function Register() {
                 }).catch((err) => {
                     console.log(err)
                     if (err.response.status === 422) {
-                        alert(err.response.data.details[0].message)
+
+                        toast.error(err.response.data.details[0].message)
+
                     } else {
-                        alert(err.response.data);
+                        toast.error(err.response.data);
+
                     }
                     setIsLoading(false);
                     setEnable(false);
@@ -67,6 +74,20 @@ function Register() {
 
     return (
         <FormSignUp onSubmit={sendUserSignUpData}>
+            {ToastContainer ?
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="colored" />
+                :
+                <></>}
             <RegisterContainer>
                 <BoxContainer marginRight={"58%"}>
                     <BoxSingInAndSingUp backgroundColor={"#FFFFFF"}>
