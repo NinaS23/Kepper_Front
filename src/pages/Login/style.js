@@ -37,8 +37,18 @@ width: 90%;
 }
 
 `
+const FormSignIn = styled.form`
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+background-color: #FFFFFF;
+height: 100%;
+`
+
 export {
     LoginContainer,
     ImageContainer,
-    ImageLogin
+    ImageLogin,
+    FormSignIn
 }
