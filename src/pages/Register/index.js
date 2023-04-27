@@ -10,8 +10,7 @@ import {
     RegisterContainer,
     RegisterImageContainer,
     ImageRegister,
-    FormSignUp,
-    BoxButton,
+    BoxButton
 } from "./style";
 import {
     BoxSingInAndSingUp,
@@ -19,7 +18,8 @@ import {
     InputDiv,
     BoxContainer,
     VisibilityContainer,
-    SendUserInfo
+    SendUserInfo,
+    PageForm
 } from "../../assets/styles/globalStyles";
 
 
@@ -74,7 +74,7 @@ function Register() {
     }
 
     return (
-        <FormSignUp onSubmit={sendUserSignUpData}>
+        <PageForm onSubmit={sendUserSignUpData}>
             <ToastContainer
                 position="top-right"
                 autoClose={5000}
@@ -151,7 +151,7 @@ function Register() {
                     </div>
                 </RegisterImageContainer>
             </RegisterContainer>
-        </FormSignUp>
+        </PageForm>
     )
 }
 

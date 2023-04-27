@@ -37,15 +37,6 @@ const ImageRegister = styled.img`
 width: 90%;
 
 `
-const FormSignUp = styled.form`
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 100%;
-background-color: #FFFFFF;
-height: 100%;
-`
-
 const BoxButton = styled.div`
 position: absolute;
 display: flex;
@@ -61,6 +52,5 @@ export{
 RegisterContainer,
 ImageRegister,
 RegisterImageContainer,
-FormSignUp,
 BoxButton
 }

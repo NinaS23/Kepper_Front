@@ -8,8 +8,7 @@ import Icon from "../../components/Icon";
 import {
     ImageContainer,
     LoginContainer,
-    ImageLogin,
-    FormSignIn
+    ImageLogin
 } from "./style";
 import {
     BoxSingInAndSingUp,
@@ -17,7 +16,8 @@ import {
     InputDiv,
     BoxContainer,
     VisibilityContainer,
-    SendUserInfo
+    SendUserInfo,
+    PageForm
 } from "../../assets/styles/globalStyles";
 
 function Login() {
@@ -62,7 +62,7 @@ function Login() {
     }
     return (
         <>
-            <FormSignIn onSubmit={isUserExistent}>
+            <PageForm onSubmit={isUserExistent}>
                 <ToastContainer
                     position="top-right"
                     autoClose={5000}
@@ -122,7 +122,7 @@ function Login() {
                         <ImageLogin src={loginGuy} alt="pessoas com gráfico" />
                     </ImageContainer>
                 </LoginContainer>
-            </FormSignIn>
+            </PageForm>
         </>
     );
 }

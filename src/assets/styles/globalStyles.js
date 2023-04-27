@@ -111,11 +111,21 @@ div{
     margin-top: 35%;
 }
 `
+const PageForm = styled.form`
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+background-color: #FFFFFF;
+height: 100%;
+`
+
 export {
     BoxSingInAndSingUp,
     _Input,
     InputDiv,
     BoxContainer,
     VisibilityContainer,
-    SendUserInfo
+    SendUserInfo,
+    PageForm
 }
