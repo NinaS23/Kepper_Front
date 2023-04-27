@@ -17,14 +17,27 @@ import {
 
 function Login() {
     const [typeInput, setTypeInput] = useState("password");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
     return (
         <>
             <LoginContainer>
                 <BoxContainer marginRight={"10%"}>
                     <BoxSingInAndSingUp backgroundColor={"#FFFFFF"}>
                         <InputDiv>
-                            <_Input type='text' placeholder="Email .." />
-                            <_Input type={typeInput} placeholder="Senha .." />
+                            <_Input
+                                type='text'
+                                placeholder="Email .."
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                            />
+                            <_Input
+                                type={typeInput}
+                                placeholder="Senha .."
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                            />
                             <VisibilityContainer>
                                 <div>
                                     <Icon typeInput={typeInput} setTypeInput={setTypeInput} />

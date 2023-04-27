@@ -56,7 +56,6 @@ function Register() {
                 .then(res => {
                     navigate("/sign-in");
                 }).catch((err) => {
-                    console.log(err)
                     if (err.response.status === 422 && err.response.data.details[0].message ===
                         "\"confirmPassword\" must be [ref:password]") {
                         toast.error("As senhas que você digitou não coincidem. Por favor, tente novamente")
