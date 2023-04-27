@@ -29,7 +29,6 @@ function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setconfirmPassword] = useState("");
-    const [errorMessage, setErrorMessage] = useState("");
 
     const [isLoading, setIsLoading] = useState(false);
     const [enable, setEnable] = useState(false);
