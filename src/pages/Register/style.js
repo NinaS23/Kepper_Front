@@ -37,20 +37,8 @@ const ImageRegister = styled.img`
 width: 90%;
 
 `
-const BoxButton = styled.div`
-position: absolute;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-border-radius: 35px;
-width: 60%;
-margin-top: 40px;
-`
-
 export{
 RegisterContainer,
 ImageRegister,
-RegisterImageContainer,
-BoxButton
+RegisterImageContainer
 }

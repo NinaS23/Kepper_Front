@@ -120,6 +120,17 @@ background-color: #FFFFFF;
 height: 100%;
 `
 
+const BoxButton = styled.div`
+position: absolute;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 35px;
+width: 60%;
+margin-top: ${(props) => props.marginTopButton};;
+`
+
 export {
     BoxSingInAndSingUp,
     _Input,
@@ -127,5 +138,6 @@ export {
     BoxContainer,
     VisibilityContainer,
     SendUserInfo,
-    PageForm
+    PageForm,
+    BoxButton
 }

@@ -9,8 +9,7 @@ import welcomePic from "../../assets/imgs/signUp.png";
 import {
     RegisterContainer,
     RegisterImageContainer,
-    ImageRegister,
-    BoxButton
+    ImageRegister
 } from "./style";
 import {
     BoxSingInAndSingUp,
@@ -19,7 +18,8 @@ import {
     BoxContainer,
     VisibilityContainer,
     SendUserInfo,
-    PageForm
+    PageForm,
+    BoxButton
 } from "../../assets/styles/globalStyles";
 
 
@@ -118,7 +118,7 @@ function Register() {
                             </VisibilityContainer>
                         </InputDiv>
                         {isLoading ? (
-                            <BoxButton>
+                            <BoxButton marginTopButton={"60px"}>
                                 <SendUserInfo disabled >
                                     <ThreeDots
                                         height={10}
@@ -134,7 +134,7 @@ function Register() {
                                 </SendUserInfo>
                             </BoxButton>
                         ) :
-                            <BoxButton>
+                            <BoxButton marginTopButton={"60px"}>
                                 <SendUserInfo
                                     marginTop={"0px"}
                                     type="subimit"

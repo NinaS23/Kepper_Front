@@ -17,7 +17,8 @@ import {
     BoxContainer,
     VisibilityContainer,
     SendUserInfo,
-    PageForm
+    PageForm,
+    BoxButton
 } from "../../assets/styles/globalStyles";
 
 function Login() {
@@ -99,22 +100,26 @@ function Login() {
                                 </VisibilityContainer>
                             </InputDiv>
                             {isLoading ? (
-                                <SendUserInfo disabled >
-                                    <ThreeDots
-                                        height={10}
-                                        width={60}
-                                        radius="9"
-                                        color="#ffffff"
-                                        ariaLabel="three-dots-loading"
-                                        wrapperStyle={{}}
-                                        wrapperClassName=""
-                                        visible={true}
-                                    />
-                                </SendUserInfo>
+                                <BoxButton marginTopButton={"120px"}>
+                                    <SendUserInfo disabled >
+                                        <ThreeDots
+                                            height={10}
+                                            width={60}
+                                            radius="9"
+                                            color="#ffffff"
+                                            ariaLabel="three-dots-loading"
+                                            wrapperStyle={{}}
+                                            wrapperClassName=""
+                                            visible={true}
+                                        />
+                                    </SendUserInfo>
+                                </BoxButton>
                             ) :
-                                <SendUserInfo marginTop={"120px"}>
-                                    <h2>Entrar</h2>
-                                </SendUserInfo>
+                                <BoxButton marginTopButton={"120px"}>
+                                    <SendUserInfo type="subimit">
+                                        <h2>Entrar</h2>
+                                    </SendUserInfo>
+                                </BoxButton>
                             }
                         </BoxSingInAndSingUp>
                     </BoxContainer>
